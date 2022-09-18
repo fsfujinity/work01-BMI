@@ -36,8 +36,24 @@ namespace work01_BMI
             Console.WriteLine("BMIは" + bmi.ToString("F4") + "です。");
 
 
+            //日本肥満学会の判定基準でBMI値で判定し、結果を出す
+            if (bmi < 18.5)
+            {
+                Console.WriteLine("あなたはやせ型です。");
+            }
+            else if(bmi > 25 )
+            {
+                Console.WriteLine("あなたは肥満です。");
+
+            }
+            else
+            {
+                Console.WriteLine("あなたは普通体重です。");
+            }
+
+            //適正体重の計算をして結果を出す
             double appropriateweight = (height * height) * 22;
-            Console.WriteLine("あなたの適正体重は" + appropriateweight.ToString("F1") + "です。");
+            Console.WriteLine("あなたの適正体重は" + appropriateweight.ToString("F1") + "（kg）です。");
         }
     }
 }
